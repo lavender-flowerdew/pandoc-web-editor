@@ -1,0 +1,19 @@
+
+  <li class="dropdown-header">Need Help?</li>
+  <% _.each( obj.items, function( item ){ %>
+    <% if(item.value.indexOf("help-") === 0) { %>
+  <li class="dropdown-menu-item" data-value="<%= item.value %>">
+    <a role="menuitem" tabindex="-1" href="#"><span class="glyphicon <%= item.icon %>"></span>&nbsp;<%= item.name %></a>
+  </li>
+    <% } %>
+  <% }); %>
+  <li class="divider"></li>
+  <li class="dropdown-header">New Document In...</li>
+    <% _.each(items, function( item ){ %>
+      <% if(item.value.indexOf("mode-") === 0) { %>
+  <li class="dropdown-menu-item" data-value="<%= item.value %>">
+    <a role="menuitem" tabindex="-1" href="#"><span class="glyphicon <%= item.icon %>"></span>&nbsp;<%= item.name %></a>
+  </li>
+      <% } %>
+    <% }); %>
+

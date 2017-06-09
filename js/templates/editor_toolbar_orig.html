@@ -1,0 +1,57 @@
+<div>
+  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#editor-navbar">
+     <span class="sr-only">Toggle Editor Toolbar</span>
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="editor-navbar">
+  <ul class="nav navbar-nav">
+    <li role="presentation" class="dropdown" id="mode-menu">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+        <span>Mode: </span><span id="currentModeLabel"></span><span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu" role="menu">
+      </ul>
+    </li>
+    <li role="presentation" id="editor-upload">
+      <a href="#">
+        <input type="file" id="importFile">
+        <span class="glyphicon glyphicon-open-file" aria-hidden="true"></span>
+      </a>
+    </li>
+    <li role="presentation" id="editor-download">
+      <a href="#">
+        <span class="glyphicon glyphicon-save-file" aria-hidden="true">
+      </a>
+    </li>
+    <li role="presentation" id="editor-open">
+      <a href="#">
+        <span class="glyphicon glyphicon-cloud-download" aria-hidden="true">
+      </a>
+    </li>
+    <li role="presentation" id="editor-save">
+      <a href="#">
+        <span class="glyphicon glyphicon-cloud-upload" aria-hidden="true">
+      </a>
+    </li>
+    <li role="presentation" id="editor-reset">
+      <a href="#">
+        <span class="glyphicon glyphicon-remove" aria-hidden="true">
+      </a>
+    </li>
+    <li role="presentation" id="editor-configure">
+      <a href="#">
+        <span class="glyphicon glyphicon-cog" aria-hidden="true">
+      </a>
+    </li>
+    <li role="presentation" id="editor-resize">
+      <a href="#">
+        <span class="glyphicon glyphicon-resize-full" aria-hidden="true">
+      </a>
+    </li>
+  </ul>
+  </div>
+</div>
+
+<h4 class="card-title" style="border-bottom: grey solid 1px;padding-bottom: 5px;">Preview: </h4>

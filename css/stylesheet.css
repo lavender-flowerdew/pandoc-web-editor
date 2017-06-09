@@ -1,0 +1,195 @@
+/* iphone 6 */
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : landscape) {
+  a.btn {
+    font-size: 10px;
+  }
+
+  #editor-upload, #editor-download, #preview-export {
+    display: none;
+  }
+}
+
+
+@media only screen 
+and (min-device-width : 414px) 
+and (max-device-width : 736px) 
+and (orientation : landscape) {
+  a.btn {
+    font-size: 10px;
+  }
+
+  #editor-upload, #editor-download, #preview-export {
+    display: none;
+  }
+}
+
+/* iphone 5 */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : landscape) {
+  a.btn {
+    font-size: 10px;
+  }
+
+  #editor-upload, #editor-download, #preview-export {
+    display: none;
+  }
+}
+
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) 
+and (orientation : landscape) {
+  a.btn {
+    font-size: 10px;
+  }
+
+  #editor-upload, #editor-download, #preview-export {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  a.btn {
+    font-size: 10px;
+  }
+
+  #editor-upload, #editor-download, #preview-export {
+    display: none;
+  }
+}
+
+body > h1:first-child {
+  position: absolute;
+  top: 3.5em;
+  margin: 0;
+  padding: 0 0 0 10px;
+  color: black;
+  width: 100%;
+  text-align: left;
+  background-color: transparent;
+}
+
+.row-footer {
+  background-color: #f5f4f0;
+  margin: 0px auto;
+  padding: 20px 0px 20px 0px; 
+}
+
+.jumbotron {
+  padding: 0px 30px 70px 30px;
+  margin: 0px auto;
+  background: transparent;
+}
+
+address {
+  font-size: 80%;
+  margin: 0px;
+}
+
+.row-footer div.nav.navbar-nav {
+  padding-top: 0;
+}
+
+main {
+  min-height: 50em;
+}
+
+/** Editor Uchen output **/
+dt[lang=bo],
+body[lang=bo],
+span[lang=bo],
+div[lang=bo],
+p[lang=bo] {
+  font-size: 24px;
+}
+dt[lang=bo] + dd {
+  font-size: 18px;
+  line-height: 2.2em;
+}
+
+#main-toolbar.navbar-collapse.collapse {
+  /*background: white;*/
+}
+
+#editorapp {
+  min-height: 500px;
+  margin-top: 0px;
+}
+
+@font-face {
+  font-family: 'DDC Uchen';
+  src: url('../fonts/DDC_Uchen.ttf');
+}
+.uchen {
+  font-family: 'DDC Uchen', 'Kokonor', 'Microsoft Himalaya';
+  font-size: 3em;
+}
+.uchen a {
+  text-decoration: none;
+}
+.syllables {
+  display: inline-block;
+}
+.syllables > span {
+  display: none;
+}
+.syllables > span.uchen {
+  display: block;
+}
+.wylie,
+.english,
+.phonetics {
+  font-size: smaller;
+  height: 1em;
+  text-align: center;
+}
+span.english {
+  white-space: pre-wrap;
+}
+.stage0 span.english,
+.stage0 span.phonetics {
+  display: block;
+}
+.stage0 span.word .uchen {
+  margin: 0 0.5em 0 0.5em;
+}
+.stage1 span.word .uchen {
+  margin: 0 0.25em 0 0.25em;
+}
+.stage1 span.english {
+  display: block;
+}
+
+.navbar-default {
+  border-width: 0;
+  font-family: @font-family-sans-serif;
+  font-style: normal;
+  font-weight: 400;  
+}
+
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a {
+  border-bottom: 3px solid transparent;
+  transition: border-bottom 1s ease-out,
+              color 1s ease-out;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  border-bottom: 3px solid @gray-light;
+}
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+} 
