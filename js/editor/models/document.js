@@ -55,12 +55,46 @@ define([
         if (options.isWylieOnly === true) {
           text = ":::\n" + text + ":::";
         }
-        markdown.Markdown.dialects.ExtendedWylie.isMarkUp = true;
-        var tree = markdown.parse(text, "ExtendedWylie");
-        var jsonml = markdown.toHTMLTree( tree );
-        var html = markdown.renderJsonML( jsonml );
+        //markdown.Markdown.dialects.ExtendedWylie.isMarkUp = true;
+        //var tree = markdown.parse(text, "ExtendedWylie");
+        //var jsonml = markdown.toHTMLTree( tree );
+        var html = "<a></a>";//markdown.renderJsonML( jsonml );
 
-        return html;
+        $.ajax({
+          type: "POST",
+          url: 'http://localhost/pandoc/index',
+          data: text,
+          dataType: 'text',
+          accepts: 'text/html'
+        }).done(function(data) {
+          console.log( "success" );
+          $( "#preview-area" ).empty().append( $( data ) );
+          //var oReq = new XMLHttpRequest();
+          //oReq.open("POST", "http://localhost/pandoc/index", true);
+          //oReq.responseType = "blob";
+
+          //oReq.onload = function(oEvent) {
+          //  var blob = oReq.response;
+          //  url = URL.createObjectURL(blob);
+          //  console.log(url);
+          //  _iFrame = document.createElement('iframe');
+          //  _iFrame.setAttribute('src', url);
+          //  _iFrame.setAttribute('style', 'width:100%;height:400px;overflow:scroll;');
+          //  _iFrame.setAttribute('type', "application/pdf");
+          //  $('body').append(_iFrame);
+          //  window.open(url, '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
+          //};
+          //oReq.setRequestHeader("Accept", "application/pdf");
+          //oReq.send(text);
+        })
+        .fail(function() {
+          console.log( "error" );
+        })
+        .always(function() {
+          console.log( "complete" );
+        });
+
+      return html;
     },
     toArticle: function(options) {
       var header = "---\n" + JsYaml.dump({"layout": "post",
