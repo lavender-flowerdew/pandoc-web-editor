@@ -62,7 +62,7 @@ define([
 
         $.ajax({
           type: "POST",
-          url: 'http://localhost/pandoc/index',
+          url: '/pandoc/index',
           data: text,
           dataType: 'text',
           accepts: 'text/html'
